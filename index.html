@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function sub(x,y){
+        return x-y;
+    }
+
+    function div(x,y){
+        return y !== 0 ? x / y : "Divisão por zero!";
+    }
+    function nulti(x,y){
+        return x*y;
+    }
+
+    function calcular(operaçao){
+        const valor1 = parseFloat(document.getElementById("valor1").value);
+        const valor2 = parseFloat(document.getElementById("valor2").value);
+        let resultado = 0;
+        let operador = '';
+        
+        if (isNaN(valor1) || isNaN(valo2)) {
+         document.getElementById("erro").style.display = "block";
+         document.getElementById("erro").innerHTML = "por favor, insira números válidos.";
+         return;
+        } else {
+         document.getElementById("erro").style.display = "none";
+         document.getElementById("resultado").style.display = "block";
+        }
+
+        switch (operacao) {
+            case 'soma': 
+            case 'sub':
+            case 'div':
+            case 'multi':    
+
+
+
+        }
+
+    }
+
+   switch (operacao) {
+    case 'soma':
+        resultado = soma(valor1,valor2);
+        operador = '+';
+        break;
+
+        case 'sub':
+        resultado = sub(valor1,valor2);
+        operador = '-';
+        break;
+
+        case 'div':
+        resultado = div(valor1,valor2);
+        operador = '/';
+        break;
+
+        case 'multi':
+        resultado = multi(valor1,valor2);
+        operador = '*';
+        break;
+
+        document.getElementById("operaçao").innerHTML = operador ;
+        document.getElementById("resultado").innerHTML = "=" + resultado ;
+
+   }
+    </script>
+</head>
+
+<body>
+
+    <h3>Calculadora</h3>
+    <form action="">
+        <input type="text" id="valor1">
+        <input type="text" id="valor2">
+    </form>
+    <hr>
+    <button type="button" id="soma">soma</button>
+    <button type="button" id="sub">subtração</button>
+    <button type="button" id="div">Divisão</button>
+    <button type="button" id="multi">Multiplicação</button>
+
+
+    <h1 id="primeiro"></h1>
+    <button type="button" onclick="minhaPrimeirafuncao()">Clique e veja a mágica </button>
+    </div>
+
+    <button onclick="document.getElementById('troca').src='imagens/futebol.jpg'">futebol</button>
+
+    <img id="troca" src="imagens/futebol.jpg" style="width: 200px ;height: 200px ;">
+
+    <button onclick="document.getElementById('troca').src='imagens/campeonatos-de-futebol.png'">campo</button>
+
+    <button onclick="document.getElementById('troca').src='imagens/lebron-james-nba-recorde-1.webp'">basquete</button>
+
+</body>
+
+</html>
